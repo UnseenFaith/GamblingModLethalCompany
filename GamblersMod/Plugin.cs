@@ -12,7 +12,7 @@ namespace GamblersMod
     [BepInPlugin(modGUID, modName, modVersion)]
     public class Plugin : BaseUnityPlugin
     {
-        public const string modGUID = "Junypai.GamblersMod";
+        public const string modGUID = "BlobyBlob.GamblersMod";
         public const string modName = "Gamblers Mod";
         public const string modVersion = "1.0.0";
 

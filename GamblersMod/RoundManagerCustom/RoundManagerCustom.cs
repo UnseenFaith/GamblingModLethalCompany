@@ -14,10 +14,14 @@ namespace GamblersMod.RoundManagerCustomSpace
         {
             RoundManager = GetComponent<RoundManager>();
             spawnPoints = new List<Vector3>();
+            spawnPoints.Add(new Vector3(-27.808f, -2.6256f, -14.7409f));
             spawnPoints.Add(new Vector3(-27.808f, -2.6256f, -9.7409f));
             spawnPoints.Add(new Vector3(-27.808f, -2.6256f, -4.7409f));
             spawnPoints.Add(new Vector3(-27.808f, -2.6256f, 0.7409f));
             spawnPoints.Add(new Vector3(-27.808f, -2.6256f, 6.7409f));
+            spawnPoints.Add(new Vector3(-27.808f, -2.6256f, 11.7409f));
+            spawnPoints.Add(new Vector3(-27.808f, -2.6256f, 16.7409f));
+            spawnPoints.Add(new Vector3(-20.208f, -2.6256f, -77.5409f));
         }
 
         [ServerRpc]
@@ -35,7 +39,14 @@ namespace GamblersMod.RoundManagerCustomSpace
             {
                 // Machine spawn per vector points
                 if (i >= spawnPoints.Count) return;
-                GamblingMachineManager.Instance.Spawn(spawnPoints[i], Quaternion.Euler(0, 90, 0));
+                if (i == 7)
+                {
+                    GamblingMachineManager.Instance.Spawn(spawnPoints[i], Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    GamblingMachineManager.Instance.Spawn(spawnPoints[i], Quaternion.Euler(0, 90, 0));
+                }
                 Plugin.mls.LogInfo($"Spawned machine number: {i}");
             }
         }
