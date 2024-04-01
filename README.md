@@ -1,6 +1,7 @@
-# Gambling Mod
+# More Gambling Mod
 
-No longer supported since I have other stuff I'm working on! If it completely breaks you can open an issue and I can try to fix it or someone can fork and upload their own version
+Just a fork of the original mod to allow up to 8 machines for larger lobbies.
 
-## See Mod Page
+## See Original Mod Pages
+https://github.com/JunyDeveloper/GamblingModLethalCompany
 https://thunderstore.io/c/lethal-company/p/JunLethalCompany/GamblingMachineAtTheCompany/
